@@ -57,6 +57,12 @@ This code will plot the average daily steps per interval.
 plot(result2$interval, result2$avg_interval, xlab = "Interval", ylab = "Average steps", col = 2, bg = "white", main = "", type = "l")
 ```
 
+```{r max}
+max_interval <- subset(result2, avg_interval == max(result2$avg_interval))
+maxInt <-max_interval$interval
+```
+The 5 minute interval that, on average, contains the maximum number of steps is interval number `r maxInt`.
+
 ## Imputing missing values
 ```{r totalNA}
 totalNA <- sum(is.na(activity))

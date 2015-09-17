@@ -81,6 +81,13 @@ plot(result2$interval, result2$avg_interval, xlab = "Interval", ylab = "Average 
 
 ![](PA1_template_files/figure-html/intervalNAplot-1.png) 
 
+
+```r
+max_interval <- subset(result2, avg_interval == max(result2$avg_interval))
+maxInt <-max_interval$interval
+```
+The 5 minute interval that, on average, contains the maximum number of steps is interval number 835.
+
 ## Imputing missing values
 
 ```r
